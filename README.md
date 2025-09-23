@@ -44,13 +44,13 @@ Exploratory Data Analysis (EDA) was crucial for understanding the dataset's chal
 **1. The Imbalanced Target**
 The class imbalance was the first and most important discovery, shaping the entire project's evaluation framework. A model that always predicted "No" would be 78% accurate but completely useless.
 
-![Target Variable Distribution](images/01_target_distribution.png)
+![Target Variable Distribution](assets/01_target_distribution.png)
 
 **2. Understanding Feature Relationships**
 The correlation heatmap and box plots revealed key predictive signals. `Humidity3pm` showed a very strong relationship with `RainTomorrow`, making it a critical feature for all models. This visual evidence confirms real-world meteorological principles and validates the dataset's quality.
 
-![Correlation Heatmap](images/02_correlation_heatmap.png)
-![Humidity Box Plot](images/03_humidity_boxplot.png)
+![Correlation Heatmap](assets/02_correlation_heatmap.png)
+![Humidity Box Plot](assets/03_humidity_boxplot.png)
 
 ---
 
@@ -107,13 +107,13 @@ We assembled our three most diverse and powerful models. A key engineering decis
 
 | CatBoost Pipeline | Random Forest Pipeline | Logistic Regression Pipeline |
 | :---: | :---: | :---: |
-| ![CatBoost Pipeline](images/04a_catboost_pipeline.png) | ![Random Forest Pipeline](images/04b_randomforest_pipeline.png) | ![Logistic Regression Pipeline](images/04c_logistic_pipeline.png) |
+| ![CatBoost Pipeline](assets/04a_catboost_pipeline.png) | ![Random Forest Pipeline](assets/04b_randomforest_pipeline.png) | ![Logistic Regression Pipeline](assets/04c_logistic_pipeline.png) |
 | *Note: Uses `to_string` to leverage native categorical handling.* | *Note: Uses `OneHotEncoder` as it cannot handle strings.* | *Note: Also uses `OneHotEncoder`.* |
 
 **2. The Stacking Architecture & Experiments**
 The three base models were combined into a `StackingClassifier`. A final gauntlet was run to find the best meta-model, testing Linear, Boosting, Bagging, and Neural Network approaches.
 
-![Stacking Architecture Diagram](images/05_stacking_architecture.png)
+![Stacking Architecture Diagram](assets/05_stacking_architecture.png)
 
 **3. The Final Verdict**
 The champion Stacking Classifier was evaluated on the completely untouched **test set**.
@@ -123,7 +123,7 @@ The champion Stacking Classifier was evaluated on the completely untouched **tes
 | **Champion Stacking Classifier (MLP Meta)** | **0.5832** | **0.8731** |
 | Single CatBoost Model (Estimated Test Score) | ~0.58 - 0.59 | ~0.88 - 0.89 |
 
-![Final Confusion Matrix](images/06_final_confusion_matrix.png)
+![Final Confusion Matrix](assets/06_final_confusion_matrix.png)
 
 **SUCCESS!** After extensive experimentation, we successfully engineered a Stacking Classifier that **matched the performance of the single best model.** The key breakthroughs were discovering the optimal training strategy (`cv=2`) and using a flexible `MLPClassifier` as the meta-model.
 
@@ -143,7 +143,7 @@ However, the ultimate conclusion follows **Occam's Razor**: since the complex en
 
 **Gradio App Demo**
 
-![Gradio App Screenshot](images/07_gradio_app.png)
+![Gradio App Screenshot](assets/07_gradio_app.png)
 
 ---
 
