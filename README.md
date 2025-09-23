@@ -1,4 +1,5 @@
-# Machine Learning For Classification
+![Project Banner](assets/08_banner.png)
+
 # The Ultimate Classifier Gauntlet
 ### A Deep Dive into Ensemble Methods for Australian Weather Prediction
 
