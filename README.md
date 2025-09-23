@@ -23,7 +23,7 @@ The project culminates in a series of deep investigations into ensemble methods,
 ### Project Objective
 The grand objective was to master and compare a wide range of classification algorithms on a difficult, imbalanced dataset. The project was divided into two main phases:
 
-1.  **The Gauntlet:** Systematically train, tune, and evaluate a wide range of classification models to create a definitive performance leaderboard and identify a "champion" single model.
+1.  **The Gauntlet:** Systematically train, tune, and evaluate a wide range of classification models to create a definitive performance leaderboard.
 2.  **The Grand Finale:** Combine the best and most diverse models from the gauntlet into a single, superior `StackingClassifier` to test the "wisdom of the crowd" hypothesis and push the limits of predictive performance through advanced ensembling.
 
 ---
@@ -34,7 +34,7 @@ The project uses the `australia.csv` dataset, a real-world collection of daily w
 **Key Characteristics:**
 *   **Imbalanced Data:** The target variable, `RainTomorrow`, is naturally imbalanced (78% "No" vs. 22% "Yes"), making F1-Score and AUC-ROC the primary evaluation metrics. Accuracy would be a misleading indicator of performance.
 *   **Messy Data:** The dataset contains a significant number of missing values across multiple columns, requiring a robust and consistent imputation strategy.
-*   **Time-Series Nature:** The data is recorded chronologically. To prevent data leakage and accurately simulate a real-world forecasting scenario, a strict time-based split was enforced.
+*   **Time-Series Nature:** The data is recorded chronologically, necessitating a time-based split to prevent data leakage and accurately simulate a real-world forecasting scenario.
 
 ---
 
@@ -74,15 +74,18 @@ The true hero of this project was the rigorous and repeatable methodology. Every
 ---
 
 ### The Gauntlet: Final Model Leaderboard
-After running all models through the gauntlet, we produced a definitive ranking based on their performance on the 2015 validation set.
+After running all models through the gauntlet, we produced a definitive ranking based on their performance on the 2015 validation set. The journey through these models provided the foundational lessons for the entire project.
 
-| Rank | Model | Validation F1-Score | Key Finding |
+| Rank | Model | Validation F1-Score | Key Lesson Learned |
 | :--- | :--- | :--- | :--- |
 | 1 | **CatBoost** | **0.6111** | **THE ULTIMATE CHAMPION.** Its native handling of categorical features proved unbeatable. |
 | 2 | XGBoost | 0.6017 | A top-tier contender, confirming the power of modern gradient boosting. |
 | 3 | LightGBM | 0.5921 | Excellent performance, completing the "big three" of boosting models. |
 | 4 | Random Forest (Tuned) | 0.5765 | The best non-boosting model, chosen for its diverse bagging approach. |
 | 5 | Logistic Regression | 0.5660 | A surprisingly strong linear baseline, chosen for its simplicity. |
+| 6 | AdaBoost | 0.5601 | The original boosting algorithm; strong but outclassed by modern implementations. |
+| 7 | Decision Tree | 0.5395 | An essential baseline, perfectly illustrating the need for ensemble methods. |
+| 8 | K-Neighbors Classifier | 0.5320 | Proved that simple distance-based similarity was not a strong signal. |
 | - | *Support Vector Machine* | *Infeasible* | **A key lesson:** The SVM was computationally infeasible on the CPU and failed on the GPU due to library instability, proving that not all algorithms are practical for large datasets. |
 
 ---
