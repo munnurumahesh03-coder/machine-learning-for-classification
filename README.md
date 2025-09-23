@@ -24,7 +24,7 @@ The project culminates in a series of deep investigations into ensemble methods,
 The grand objective was to master and compare a wide range of classification algorithms on a difficult, imbalanced dataset. The project was divided into two main phases:
 
 1.  **The Gauntlet:** Systematically train, tune, and evaluate a wide range of classification models to create a definitive performance leaderboard.
-2.  **The Grand Finale:** Combine the best and most diverse models from the gauntlet into a single, superior `StackingClassifier` to test the "wisdom of the crowd" hypothesis and push the limits of predictive performance through advanced ensembling.
+2.  **The Grand Finale:** Combine the best and most diverse models from the gauntlet into a single, superior `StackingClassifier` to test the "wisdom of the crowd" hypothesis.
 
 ---
 
