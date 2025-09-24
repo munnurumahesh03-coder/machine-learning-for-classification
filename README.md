@@ -22,7 +22,7 @@ The project culminates in a series of deep investigations into ensemble methods,
 
 ---
 
-### ![Project Objective](assets/project%20objective.png)
+### Project Objective
 
 
 The grand objective was to master and compare a wide range of classification algorithms on a difficult, imbalanced dataset. The project was divided into two main phases:
