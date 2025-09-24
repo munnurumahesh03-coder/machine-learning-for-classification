@@ -22,7 +22,7 @@ The project culminates in a series of deep investigations into ensemble methods,
 
 ---
 
-### Project Objective
+### ![Project Objective](assets/project%20objective.png)
 
 
 The grand objective was to master and compare a wide range of classification algorithms on a difficult, imbalanced dataset. The project was divided into two main phases:
@@ -32,7 +32,7 @@ The grand objective was to master and compare a wide range of classification alg
 
 ---
 
-### The Dataset: Challenges and Characteristics
+### ![The Dataset Challenges and Characteristics](assets/The%20Dataset%20Challenges%20and%20Characteristics.png)
 The project uses the `australia.csv` dataset, a real-world collection of daily weather observations from numerous locations across Australia. The dataset was chosen specifically for its real-world imperfections.
 
 **Key Characteristics:**
@@ -42,7 +42,7 @@ The project uses the `australia.csv` dataset, a real-world collection of daily w
 
 ---
 
-### Visualizing the Data: Key Insights
+### ![Visualizing the Data Key Insights](assets/Visualizing%20the%20Data%20Key%20Insights.png)
 Exploratory Data Analysis (EDA) was crucial for understanding the dataset's challenges and guiding our modeling strategy.
 
 **1. The Imbalanced Target**
@@ -58,7 +58,7 @@ The correlation heatmap and box plots revealed key predictive signals. `Humidity
 
 ---
 
-### Methodology: A Rigorous and Repeatable Workflow
+### ![Methodology A Rigorous and Repeatable Workflow](assets/Methodology%20A%20Rigorous%20and%20Repeatable%20Workflow.png)
 The true hero of this project was the rigorous and repeatable methodology. Every model was built and evaluated using a consistent, pipeline-first approach to ensure fair and reliable comparisons.
 
 *   **Data Cleaning & Feature Engineering:**
@@ -77,7 +77,7 @@ The true hero of this project was the rigorous and repeatable methodology. Every
 
 ---
 
-### The Gauntlet: Final Model Leaderboard
+### ![The Gauntlet Final Model Leaderboard](assets/The%20Gauntlet%20Final%20Model%20Leaderboard.png)
 After running all models through the gauntlet, we produced a definitive ranking based on their performance on the 2015 validation set. The journey through these models provided the foundational lessons for the entire project.
 
 | Rank | Model | Validation F1-Score | Key Lesson Learned |
@@ -94,7 +94,7 @@ After running all models through the gauntlet, we produced a definitive ranking 
 
 ---
 
-### Grand Lessons & Key Findings
+### ![Grand Lessons & Key Findings](assets/Grand%20Lessons%20&%20Key%20Findings.png)
 *   **The "No Free Lunch" Theorem is Real:** We definitively proved this theorem. Our results showed that even state-of-the-art boosting models required careful configuration, and a simple linear model (`LogisticRegression`) set a surprisingly competitive benchmark that was difficult to beat. No single algorithm was a "silver bullet."
 
 *   **Baselines Can Be Champions:** A profound lesson from this project was that for highly optimized libraries like XGBoost and LightGBM, the **default baseline parameters were often superior** to our initial tuning attempts. This demonstrates that well-engineered defaults can sometimes outperform a naive hyperparameter search, and that tuning is not always a guarantee of improvement.
@@ -103,7 +103,7 @@ After running all models through the gauntlet, we produced a definitive ranking 
 
 ---
 
-### The Grand Finale: Engineering the Stacking Classifier
+### ![The Grand Finale Engineering the Stacking Classifier](assets/The%20Grand%20Finale%20Engineering%20the%20Stacking%20Classifier.png)
 The final objective was to build a `StackingClassifier` to see if a "team" of models could outperform the individual champion, CatBoost.
 
 **1. The "All-Star" Team & Their Pipelines**
@@ -135,7 +135,7 @@ However, the ultimate conclusion follows **Occam's Razor**: since the complex en
 
 ---
 
-### How to Use This Repository
+### ![How to Use This Repository](assets/How%20to%20Use%20This%20Repository.png)
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/your-username/your-repo-name.git
@@ -151,7 +151,7 @@ However, the ultimate conclusion follows **Occam's Razor**: since the complex en
 
 ---
 
-### Future Improvements
+### ![Future Improvements](assets/Future%20Improvements.png)
 While this project is complete, the methodology opens the door for further exploration.
 
 *   **Deeper Error Analysis:** Analyze the residuals (prediction errors) of the final models. Are there specific locations or weather patterns where the models consistently fail? This could guide the next round of feature engineering.
