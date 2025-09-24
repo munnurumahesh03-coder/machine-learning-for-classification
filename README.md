@@ -22,7 +22,8 @@ The project culminates in a series of deep investigations into ensemble methods,
 
 ---
 
-### Project Objective
+### ![Project Objective](assets/project%20objective.png)
+
 The grand objective was to master and compare a wide range of classification algorithms on a difficult, imbalanced dataset. The project was divided into two main phases:
 
 1.  **The Gauntlet:** Systematically train, tune, and evaluate a wide range of classification models to create a definitive performance leaderboard.
