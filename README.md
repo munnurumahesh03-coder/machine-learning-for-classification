@@ -1,4 +1,4 @@
-![Project Banner](assets/08_banner.png)
+![Project Banners](assets/08_banners.png)
 
 # The Ultimate Classifier Gauntlet
 ### A Deep Dive into Ensemble Methods for Australian Weather Prediction
